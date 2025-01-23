@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car vs Motorcycle Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Car vs Motorcycle Classifier</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Upload and Classify</button>
+        </form>
+
+        {% if result %}
+            <h2>Result: {{result}}</h2>
+            <img src="{{ file_path }}" alt="Uploaded Image" width="300">
+        {% endif %}
+    </div>
+</body>
+</html>
