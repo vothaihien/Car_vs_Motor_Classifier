@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-MODEL_PATH = 'model\car_motorcycle_classifier.h5'
+MODEL_PATH = os.path.join('model', 'car_motorcycle_classifier.h5')
 model = load_model(MODEL_PATH)
 
 def predict_image(img_path):
